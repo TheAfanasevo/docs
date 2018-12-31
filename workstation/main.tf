@@ -23,7 +23,7 @@ resource "digitalocean_droplet" "dev" {
     }
   }
 
-	provisioner "file" {
+  provisioner "file" {
     source      = "pull-secrets.sh"
     destination = "/mnt/secrets/pull-secrets.sh"
 

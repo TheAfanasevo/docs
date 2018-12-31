@@ -62,6 +62,8 @@ RUN go get -u github.com/koron/iferr
 
 # generic tools
 RUN go get -u github.com/aybabtme/humanlog/cmd/...
+RUN go get -u github.com/fatih/hclfmt
+
 
 # base OS
 FROM ubuntu:18.10
@@ -175,6 +177,9 @@ RUN wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql
 
 # doctl
 RUN wget https://github.com/digitalocean/doctl/releases/download/v1.12.2/doctl-1.12.2-linux-amd64.tar.gz && tar xf doctl-1.12.2-linux-amd64.tar.gz && chmod +x doctl && mv doctl /usr/local/bin && rm doctl-1.12.2-linux-amd64.tar.gz
+
+# terraform
+RUN wget https://releases.hashicorp.com/terraform/0.11.11/terraform_0.11.11_linux_amd64.zip && unzip terraform_0.11.11_linux_amd64.zip && chmod +x terraform && mv terraform /usr/local/bin && rm terraform_0.11.11_linux_amd64.zip
 
 # for correct colours is tmux
 ENV TERM screen-256color
