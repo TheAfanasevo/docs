@@ -222,7 +222,9 @@ RUN ln -s /root/dotfiles/gitconfig /root/.gitconfig
 RUN ln -s /root/dotfiles/agignore /root/.agignore
 RUN ln -s /root/dotfiles/sshconfig /root/.ssh/config
 
+RUN chsh -s /usr/bin/zsh
+
 USER root
-EXPOSE 3222 63200-63220/udp
+EXPOSE 3222 60000-60010/udp
 CMD ["/usr/sbin/sshd", "-D"]
 
