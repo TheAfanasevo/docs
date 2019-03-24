@@ -1,5 +1,5 @@
 # Kubernetes-CSI Documentation
-Welcome to the Kubernets-CSI documentation reposotiory. Here you will find information on how to use, develop, and deploy CSI plugins, or drivers, with Kubernetes.
+Welcome to the Kubernets-CSI documentation repository. Here you will find information on how to use, develop, and deploy CSI plugins, or drivers, with Kubernetes.
 
 This is the repository for the book published on [kubernetes-csi.github.io/docs](https://kubernetes-csi.github.io/docs/). The sources for the book are in the `book/` and it is setup to use [mdbook](https://github.com/rust-lang-nursery/mdBook).
 
